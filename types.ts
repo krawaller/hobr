@@ -161,9 +161,9 @@ export type UnitCollection = {
 }
 
 export type Faction = {
-  tiles: TileCollection,
-  options: OptionCollection,
-  units: UnitCollection
+  tiles: RawTile[],
+  options: RawOption[],
+  units: RawUnit[]
 };
 
 export type Army = {
