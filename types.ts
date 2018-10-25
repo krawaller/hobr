@@ -7,7 +7,8 @@ type RecursivePartial<T> = {
 
 export type OptionKind =
   | 'orc_command'
-  | 'orc_flyingRampage' 
+  | 'orc_flyingRampage'
+  | 'orc_teefBreakas'
   | 'orc_vehicle' 
   | 'orc_generic'
 ;
@@ -18,7 +19,8 @@ export type RawOption<ID extends string = OptionId> = {
   id: ID
   kind: OptionKind
   vp?: Number
-  price: Number
+  price: Number,
+  break?: Number
   provides?: Provision[]
 }
 
@@ -90,6 +92,8 @@ export type UnitId =
   | 'badMoons_gorkanaut'
   | 'flyingRampage_boss'
   | 'flyingRampage_stormboyz'
+  | 'teefBreakas_bigShoota'
+  | 'teefBreakas_rokkitLauncha'
   ;
 
 export type Arc =
@@ -127,6 +131,8 @@ export type UnitSpecials = {
   mekaniak?: Number
   transport?: Number
   largeTransport?: Number
+  flying?: Boolean
+  assault?: Number
 }
 
 export type UnitSideType = 'healthy' | 'passive' | 'active' | 'normal' | 'wreck';
