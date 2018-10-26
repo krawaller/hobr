@@ -1,30 +1,27 @@
 import { RawUnit } from '@types';
 
-const stormBoyz: RawUnit = {
-  id: 'flyingRampage_stormboyz',
-  name: 'Stormboyz',
+const sluggas: RawUnit = {
+  id: 'teefBreakas_sluggas',
+  name: 'Sluggas',
   type: 'infantry',
   front: {
     type: 'healthy',
-    move: 5,
+    move: 3,
     defence: 4,
     attack: {
       infantry: 1,
       light: 1,
-      heavy: 0,
+      heavy: 'X',
       range: 4,
       suppressive: true
     },
     specials: {
-      large: true,
-      flying: true,
       assault: 3
     }
   },
   back: {
     attack: {
-      light: 0,
-      heavy: 0
+      light: 0
     },
     specials: {
       assault: 2
@@ -32,4 +29,4 @@ const stormBoyz: RawUnit = {
   }
 }
 
-export default stormBoyz;
+export default sluggas;

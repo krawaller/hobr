@@ -1,6 +1,6 @@
 import { RawUnit } from '@types';
 
-const bossMob: RawUnit<'flyingRampage_bossMob'> = {
+const bossMob: RawUnit = {
   id: 'flyingRampage_bossMob',
   name: 'bossMob',
   type: 'infantry',

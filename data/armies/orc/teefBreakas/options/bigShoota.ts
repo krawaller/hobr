@@ -1,7 +1,7 @@
 import { RawOption } from '@types';
 
 const mekGun: RawOption = {
-  id: 'badMoons_mekGun',
+  id: 'teefBreakas_bigShoota',
   vp: 3,
   price: 30,
   break: 1,

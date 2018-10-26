@@ -26,6 +26,8 @@ export type RawOption<ID extends string = OptionId> = {
 
 export type OptionId =
   | 'badMoons_mekGun'
+  | 'teefBreakas_trukk'
+  | 'teefBreakas_bigShoota'
   ;
 
 export type ArmyName = 'orc' | 'ultramarines';
@@ -33,6 +35,7 @@ export type ArmyName = 'orc' | 'ultramarines';
 export type FactionName = 
   | 'badMoons'
   | 'flyingRampage'
+  | 'teefBreakas'
 
 export type Source =
   | 'base'
@@ -81,7 +84,16 @@ export type TileId =
   | 'badMoons_battleWagon'
   | 'badMoons_lootas'
   | 'badMoons_gorkanaut'
+  | 'teefBreakas_main'
+  | 'teefBreakas_sluggas'
   ;
+
+export type Wreck = {
+  health: Number
+  impassable?: UnitType
+  blockLoS?: Boolean
+  protection?: Number
+}
 
 export type UnitId =
   | 'badMoons_mek'
@@ -90,10 +102,13 @@ export type UnitId =
   | 'badMoons_grorkh'
   | 'badMoons_battleWagon'
   | 'badMoons_gorkanaut'
-  | 'flyingRampage_boss'
+  | 'flyingRampage_bossMob'
   | 'flyingRampage_stormboyz'
   | 'teefBreakas_bigShoota'
   | 'teefBreakas_rokkitLauncha'
+  | 'teefBreakas_sluggas'
+  | 'teefBreakas_shootas'
+  | 'teefBreakas_trukk'
   ;
 
 export type Arc =
@@ -152,6 +167,7 @@ export type RawUnit<ID extends string = UnitId> = {
   type: UnitType
   front: UnitSide
   back?: RecursivePartial<UnitSide>
+  wreck?: Wreck
 }
 
 export type TileCollection = {

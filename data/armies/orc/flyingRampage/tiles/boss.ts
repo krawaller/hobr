@@ -6,7 +6,7 @@ const boss: RawTile<'flyingRampage_boss'> = {
   subTitle: 'Da boss',
   source: 'orcReinforcements',
   price: 50,
-  provides: [{id: 'flyingRampage_boss'}],
+  provides: [{id: 'flyingRampage_bossMob'}],
   slots: [['orc_command', 'orc_generic']],
   specials: { armour: 5 },
   connections: { right: { kind: 'orc_flyingRampage', gender: 'male' }, },
